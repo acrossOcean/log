@@ -27,6 +27,7 @@ func DefaultLogger() *Logger {
 			"_line":  -1,
 			"_func":  "",
 		},
+		level:     LDebug,
 		formatter: jsonFormatter,
 	}
 
