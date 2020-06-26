@@ -11,7 +11,7 @@ var jsonFormatter Formatter = func(level Level, msg string, tags map[string]inte
 	}
 
 	for k, v := range tags {
-		info["_"+k] = v
+		info[k] = v
 	}
 
 	b, _ := json.Marshal(info)
