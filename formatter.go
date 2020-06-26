@@ -6,7 +6,7 @@ type Formatter func(level Level, msg string, tags map[string]interface{}) string
 
 var jsonFormatter Formatter = func(level Level, msg string, tags map[string]interface{}) string {
 	info := map[string]interface{}{
-		"level": level,
+		"level": level.String(),
 		"msg":   msg,
 	}
 
