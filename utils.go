@@ -15,7 +15,7 @@ func getFileInfo() (fileName string, lineNo int, funcName string) {
 		if !ok {
 			continue
 		}
-		if strings.Index(file, "github.com/across!ocean/log") < 0 {
+		if !strings.Contains(file, "github.com/across!ocean/log") {
 			fileName = file
 			lineNo = line
 			f := runtime.FuncForPC(pc)
