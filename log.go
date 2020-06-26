@@ -143,7 +143,7 @@ func (receiver *Logger) Debug(first interface{}, more ...interface{}) {
 		var vv interface{}
 		switch k {
 		case "_level":
-			vv = LDebug
+			vv = LDebug.String()
 		case "_time":
 			vv = time.Now().Format(time.RFC3339)
 		case "_file":
@@ -187,7 +187,7 @@ func (receiver *Logger) Info(first interface{}, more ...interface{}) {
 		var vv interface{}
 		switch k {
 		case "_level":
-			vv = LInfo
+			vv = LInfo.String()
 		case "_time":
 			vv = time.Now().Format(time.RFC3339)
 		case "_file":
@@ -231,7 +231,7 @@ func (receiver *Logger) Warn(first interface{}, more ...interface{}) {
 		var vv interface{}
 		switch k {
 		case "_level":
-			vv = LWarn
+			vv = LWarn.String()
 		case "_time":
 			vv = time.Now().Format(time.RFC3339)
 		case "_file":
@@ -275,7 +275,7 @@ func (receiver *Logger) Error(first interface{}, more ...interface{}) {
 		var vv interface{}
 		switch k {
 		case "_level":
-			vv = LError
+			vv = LError.String()
 		case "_time":
 			vv = time.Now().Format(time.RFC3339)
 		case "_file":
@@ -319,7 +319,7 @@ func (receiver *Logger) Panic(first interface{}, more ...interface{}) {
 		var vv interface{}
 		switch k {
 		case "_level":
-			vv = LPanic
+			vv = LPanic.String()
 		case "_time":
 			vv = time.Now().Format(time.RFC3339)
 		case "_file":
