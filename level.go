@@ -13,6 +13,14 @@ const (
 	LPanic
 )
 
+func ConvertToLevel(n int) Level {
+	if l := Level(n); l <= LPanic && l >= LDebug {
+		return l
+	}
+
+	return LDebug
+}
+
 func (receiver Level) String() string {
 	str := ""
 	switch receiver {
